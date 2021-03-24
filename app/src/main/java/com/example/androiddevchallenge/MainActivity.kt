@@ -15,11 +15,13 @@
  */
 package com.example.androiddevchallenge
 
+import android.graphics.Color
 import android.os.Bundle
+import android.view.View
+import android.view.Window
+import android.view.WindowManager
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -30,8 +32,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        window.makeTransparentStatusBar()
+
         setContent {
-                val navController = rememberNavController()
+            val navController = rememberNavController()
             CompositionLocalProvider(
                 LocalNavController provides navController
             ) {
@@ -39,9 +43,34 @@ class MainActivity : AppCompatActivity() {
                     NavHost(navController, startDestination = "welcome") {
                         composable("welcome") { WelcomeScreen() }
                         composable("login") { LoginScreen() }
+                        composable("home") { HomeScreen() }
                     }
                 }
             }
         }
+    }
+
+    private fun Window.makeTransparentStatusBar() {
+        markAttributes(
+            WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
+            true
+        )
+        decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+            or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
+        markAttributes(
+            WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
+            false
+        )
+        statusBarColor = Color.TRANSPARENT
+    }
+
+    private fun Window.markAttributes(bits: Int, value: Boolean) {
+        val params = attributes
+        if (value) {
+            params.flags = params.flags or bits
+        } else {
+            params.flags = params.flags and bits.inv()
+        }
+        attributes = params
     }
 }

@@ -21,9 +21,9 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MailOutline
 import androidx.compose.material.icons.filled.Password
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -35,6 +35,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.navigate
 import com.example.androiddevchallenge.ui.theme.Gray900
 import com.example.androiddevchallenge.ui.theme.WeTradeTheme
 import com.example.androiddevchallenge.ui.theme.White
@@ -69,14 +70,15 @@ fun LoginScreen() {
 
 @Composable
 private fun LoginButton() {
+    val navController = findNavController()
     PrimaryButton(
         text = "Log In", modifier =
         Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp)
-    ) {
-
-    }
+            .padding(horizontal = 16.dp),
+        onClick = {
+            navController.navigate("home")
+        })
 }
 
 @Composable
@@ -156,7 +158,7 @@ private fun Header() {
     }
 }
 
-@Preview
+@Preview(widthDp = 360, heightDp = 640)
 @Composable
 fun PreviewLightLoginScreen() {
     WeTradeTheme(darkTheme = false) {
@@ -164,7 +166,7 @@ fun PreviewLightLoginScreen() {
     }
 }
 
-@Preview
+@Preview(widthDp = 360, heightDp = 640)
 @Composable
 fun PreviewDarkLoginScreen() {
     WeTradeTheme(darkTheme = true) {

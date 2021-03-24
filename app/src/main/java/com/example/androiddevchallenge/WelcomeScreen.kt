@@ -15,6 +15,7 @@ import androidx.compose.material.OutlinedButton
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -23,6 +24,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.navigate
+import androidx.navigation.compose.rememberNavController
 import com.example.androiddevchallenge.ui.theme.WeTradeTheme
 import com.example.androiddevchallenge.ui.theme.Yellow
 
@@ -60,12 +62,14 @@ private fun ButtonsRow(modifier: Modifier = Modifier) {
             .padding(horizontal = 16.dp, vertical = 32.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
+        val navController = findNavController()
         PrimaryButton(
             text = "Get Started",
             modifier = Modifier.weight(1f),
-            onClick = {}
+            onClick = {
+                navController.navigate("home")
+            }
         )
-        val navController = findNavController()
         LoginButton(
             modifier = Modifier.weight(1f)
         ) {
@@ -94,11 +98,15 @@ private fun LoginButton(
     }
 }
 
-@Preview
+@Preview(widthDp = 360, heightDp = 640)
 @Composable
 fun WelcomeScreenPreview() {
-    WeTradeTheme {
-        WelcomeScreen()
+    val navController = rememberNavController()
+    CompositionLocalProvider(
+        LocalNavController provides navController
+    ) {
+        WeTradeTheme {
+            WelcomeScreen()
+        }
     }
 }
-
