@@ -250,10 +250,18 @@ fun StockItem(stock: Stock) {
     }
 }
 
-@Preview
+@Preview(widthDp = 360, heightDp = 640)
 @Composable
-fun DarkHomePreview() {
+fun PreviewDarkHomeScreen() {
     WeTradeTheme(darkTheme = true) {
+        HomeScreen()
+    }
+}
+
+@Preview(widthDp = 360, heightDp = 640)
+@Composable
+fun PreviewLightHomeScreen() {
+    WeTradeTheme(darkTheme = false) {
         HomeScreen()
     }
 }

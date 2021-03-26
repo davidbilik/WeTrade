@@ -100,7 +100,7 @@ private fun LoginButton(
 
 @Preview(widthDp = 360, heightDp = 640)
 @Composable
-fun WelcomeScreenPreview() {
+fun PreviewWelcomeScreen() {
     val navController = rememberNavController()
     CompositionLocalProvider(
         LocalNavController provides navController
