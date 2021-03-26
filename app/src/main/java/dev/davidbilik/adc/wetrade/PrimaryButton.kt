@@ -1,4 +1,4 @@
-package com.example.androiddevchallenge
+package dev.davidbilik.adc.wetrade
 
 import androidx.compose.foundation.layout.height
 import androidx.compose.material.Button

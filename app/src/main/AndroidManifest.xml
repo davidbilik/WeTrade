@@ -10,7 +10,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.androiddevchallenge">
+    package="dev.davidbilik.adc.wetrade">
 
     <application
         android:allowBackup="true"
@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDevChallenge">
         <activity
-            android:name="com.example.androiddevchallenge.MainActivity"
+            android:name="dev.davidbilik.adc.wetrade.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.AndroidDevChallenge.NoActionBar"
             android:windowSoftInputMode="adjustPan">

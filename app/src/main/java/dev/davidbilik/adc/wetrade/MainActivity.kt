@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge
+package dev.davidbilik.adc.wetrade
 
 import android.graphics.Color
 import android.os.Bundle
@@ -26,7 +26,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.androiddevchallenge.ui.theme.WeTradeTheme
+import dev.davidbilik.adc.wetrade.theme.ui.WeTradeTheme
 
 class MainActivity : AppCompatActivity() {
 

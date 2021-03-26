@@ -1,4 +1,4 @@
-package com.example.androiddevchallenge
+package dev.davidbilik.adc.wetrade
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -25,8 +25,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.navigate
 import androidx.navigation.compose.rememberNavController
-import com.example.androiddevchallenge.ui.theme.WeTradeTheme
-import com.example.androiddevchallenge.ui.theme.Yellow
+import dev.davidbilik.adc.wetrade.theme.ui.WeTradeTheme
+import dev.davidbilik.adc.wetrade.theme.ui.Yellow
 
 @Composable
 fun WelcomeScreen() {

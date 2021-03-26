@@ -1,4 +1,4 @@
-package com.example.androiddevchallenge
+package dev.davidbilik.adc.wetrade
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -36,9 +36,9 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.navigate
-import com.example.androiddevchallenge.ui.theme.Gray900
-import com.example.androiddevchallenge.ui.theme.WeTradeTheme
-import com.example.androiddevchallenge.ui.theme.White
+import dev.davidbilik.adc.wetrade.theme.ui.Gray900
+import dev.davidbilik.adc.wetrade.theme.ui.WeTradeTheme
+import dev.davidbilik.adc.wetrade.theme.ui.White
 
 @Composable
 fun LoginScreen() {

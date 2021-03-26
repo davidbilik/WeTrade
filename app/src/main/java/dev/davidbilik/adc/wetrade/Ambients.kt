@@ -1,4 +1,4 @@
-package com.example.androiddevchallenge
+package dev.davidbilik.adc.wetrade
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.staticCompositionLocalOf

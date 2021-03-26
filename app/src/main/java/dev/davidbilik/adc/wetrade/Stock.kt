@@ -1,4 +1,4 @@
-package com.example.androiddevchallenge
+package dev.davidbilik.adc.wetrade
 
 data class Stock(
     val title: String,

@@ -13,14 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package dev.davidbilik.adc.wetrade.theme.ui
 
-import androidx.compose.ui.graphics.Color
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Shapes
+import androidx.compose.ui.unit.dp
 
-val Yellow = Color(0xffe3da00)
-val Gray900 = Color(0xff232323)
-val Gray700 = Color(0xff2d2d2d)
-val Purple = Color(0xff322049)
-val White = Color(0xffffffff)
-val Green = Color(0xff39a844)
-val Red = Color(0xffd93c19)
+val shapes = Shapes(
+    small = RoundedCornerShape(4.dp),
+    large = RoundedCornerShape(24.dp)
+)
