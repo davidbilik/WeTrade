@@ -72,13 +72,14 @@ fun LoginScreen() {
 private fun LoginButton() {
     val navController = findNavController()
     PrimaryButton(
-        text = "Log In", modifier =
-        Modifier
+        text = "Log In",
+        modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp),
         onClick = {
             navController.navigate("home")
-        })
+        }
+    )
 }
 
 @Composable
@@ -151,7 +152,10 @@ private fun Header() {
         )
 
         Text(
-            text = "Welcome back", style = MaterialTheme.typography.h2, color = White, modifier = Modifier
+            text = "Welcome back",
+            style = MaterialTheme.typography.h2,
+            color = White,
+            modifier = Modifier
                 .padding(horizontal = 16.dp)
                 .paddingFromBaseline(152.dp)
         )

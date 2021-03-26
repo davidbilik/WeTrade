@@ -128,23 +128,27 @@ private fun FilterBar() {
 @Composable
 private fun TransactButton() {
     PrimaryButton(
-        text = "Transact", modifier = Modifier
+        text = "Transact",
+        modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp),
-        onClick = {})
+        onClick = {}
+    )
 }
 
 @Composable
 private fun BalanceTexts() {
     Text(
-        "Balance", style = MaterialTheme.typography.subtitle1, modifier = Modifier.paddingFromBaseline(
+        "Balance", style = MaterialTheme.typography.subtitle1,
+        modifier = Modifier.paddingFromBaseline(
             top = 32.dp,
             bottom = 8.dp
         )
     )
 
     Text(
-        "$73,589.01", style = MaterialTheme.typography.h1, modifier = Modifier.paddingFromBaseline(
+        "$73,589.01", style = MaterialTheme.typography.h1,
+        modifier = Modifier.paddingFromBaseline(
             top = 48.dp,
             bottom = 24.dp
         )
@@ -153,7 +157,8 @@ private fun BalanceTexts() {
     Text(
         "+412.35 today",
         style = MaterialTheme.typography.subtitle1,
-        color = Green, modifier = Modifier.paddingFromBaseline(
+        color = Green,
+        modifier = Modifier.paddingFromBaseline(
             top = 16.dp,
             bottom = 32.dp
         )
@@ -227,7 +232,8 @@ fun StockItem(stock: Stock) {
 
         Row(
             modifier = Modifier
-                .fillMaxSize(), verticalAlignment = Alignment.CenterVertically
+                .fillMaxSize(),
+            verticalAlignment = Alignment.CenterVertically
         ) {
             Column(
                 modifier = Modifier.width(80.dp)
